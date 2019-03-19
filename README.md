@@ -195,11 +195,11 @@
 ### 结果截图：
 <image width='250dp' hight='450dp' src="https://github.com/lianxinZ/project2.0/blob/master/images/project2-1.jpg">
   
-  ## 2.ConstraintLayout
+  ## 2.RelativeLayout
   ### 关键代码：
   ~~~
-  <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -221,8 +221,8 @@
         android:background="#ff5500"
         android:text="ORANGE"
         android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:layout_centerHorizontal="true"
+        />
     <TextView
         android:id="@+id/t3"
         android:layout_width="80dp"
@@ -230,7 +230,7 @@
         android:background="#ffee00"
         android:text="YELLOW"
         android:gravity="center"
-        app:layout_constraintRight_toRightOf="parent"/>
+        android:layout_alignParentRight="true"/>
     <TextView
         android:id="@+id/t4"
         android:layout_width="80dp"
@@ -238,59 +238,56 @@
         android:background="#002fff"
         android:text="BLUE"
         android:gravity="center"
+        android:layout_below="@id/t3"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/t3" />
+        />
 
     <TextView
         android:id="@+id/t5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#aa00ff"
+        android:text="INDIGO"
+        android:gravity="center"
+        android:layout_below="@id/t3"
+        android:layout_toRightOf="@id/t4"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/t6"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="#00ff04"
         android:text="GREEN"
         android:gravity="center"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        app:layout_constraintRight_toLeftOf="@id/t4"
-        app:layout_constraintTop_toBottomOf="@id/t3"/>
-
-    <TextView
-        android:id="@+id/t6"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="#aa00ff"
-        android:text="INDIGO"
-        android:gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        app:layout_constraintLeft_toRightOf="@id/t4"
-        app:layout_constraintTop_toBottomOf="@id/t3"/>
+        android:layout_below="@id/t3"
+        android:layout_toLeftOf="@id/t4"/>
 
     <TextView
         android:id="@+id/t7"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="#aa00ff"
-        android:text="INDIGO"
+        android:background="#ff77c6"
+        android:text="VIOLET"
         android:gravity="center"
         android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@id/t4"/>
+        android:layout_below="@id/t6"/>
 
     <Button
         android:id="@+id/b2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:text="下一个"
-        app:layout_constraintTop_toBottomOf="@id/t7" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/t7"/>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
+
 ~~~
 ### 结果截图：
 <image width='250dp' hight='450dp' src="https://github.com/lianxinZ/project2.0/blob/master/images/project2-2.jpg">
